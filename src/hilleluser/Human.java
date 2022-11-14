@@ -1,39 +1,40 @@
 package hilleluser;
 
 public class Human extends Participant implements User {
-    private String name;
-    Human human;
+     private Integer jumpHeight;
+    private Integer runDistance;
 
-
-    public Human(String name) {
+    public Human(Integer jumpHeight1, Integer runDistance1) {
         super();
-        this.name = name;
+        this.jumpHeight = jumpHeight;
+        this.runDistance = runDistance;
     }
-
-
-    public String getName() {
-
-        return name;
-    }
-
-
-    public void setName(String name) {
-
-        this.name = name;
-    }
-
 
     @Override
-    public Integer run() {
-
-        //System.out.println(getName() + " to running ");
-        return human.runDistance = 5000;
+    public Integer getJumpHeight() {
+        return jumpHeight;
     }
 
-    public Integer jump() {
+    public void setJumpHeight(Integer jumpHeight) {
+        this.jumpHeight = jumpHeight;
+    }
 
-        //System.out.println(getName() + " to jumping ");
-        return human.jumpHeight = 5;
+    @Override
+    public Integer getRunDistance() {
+        return runDistance;
+    }
+
+    public void setRunDistance(Integer runDistance) {
+        this.runDistance = runDistance;
+    }
+
+    @Override
+    public void run() {
+        System.out.println(" to running ");
+    }
+
+    public void jump() {
+        System.out.println(" to jumping ");
     }
 
 

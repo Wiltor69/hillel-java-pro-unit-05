@@ -1,37 +1,44 @@
 package hilleluser;
 
 public class Cat extends Participant implements User {
-    private String name;
+    private Integer jumpHeight;
+    private Integer runDistance;
 
-    public Cat(String name) {
-
-        this.name = name;
-    }
-
-    public Cat() {
-    }
-
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    public Cat(Integer jumpHeight, Integer runDistance) {
+        this.jumpHeight = jumpHeight;
+        this.runDistance = runDistance;
     }
 
     @Override
-    public Integer run() {
+    public Integer getJumpHeight() {
+        return jumpHeight;
+    }
 
-        //System.out.println(getName() + " to running ");
-        return runDistance = 1000;
+    public void setJumpHeight(Integer jumpHeight) {
+        this.jumpHeight = jumpHeight;
     }
 
     @Override
-    public Integer jump() {
+    public Integer getRunDistance() {
+        return runDistance;
+    }
 
-        //System.out.println(getName() + " to jumping ");
-        return jumpHeight = 3;
+    public void setRunDistance(Integer runDistance) {
+        this.runDistance = runDistance;
+    }
+
+    @Override
+    public void run() {
+
+        System.out.println(" to running ");
+
+    }
+
+    @Override
+    public void jump() {
+
+        System.out.println(" to jumping ");
+
     }
 
 

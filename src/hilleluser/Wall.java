@@ -1,6 +1,6 @@
 package hilleluser;
 
-public class Wall implements Let{
+public class Wall implements Let {
     Integer height;
 
 
@@ -12,9 +12,9 @@ public class Wall implements Let{
     @Override
     public boolean overcome(Participant participant) {
 
-        if(height < participant.getJumpHeight()){
+        if (height < participant.getJumpHeight()) {
             return true;
-        } else
-        return false;
+        }  else
+            return false;
     }
 }

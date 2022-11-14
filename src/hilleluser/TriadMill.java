@@ -2,9 +2,7 @@ package hilleluser;
 
 public class TriadMill implements Let{
     Integer distance;
-    Human human;
-    Cat cat;
-    Robot robot;
+
     public TriadMill(Integer distance) {
         this.distance = distance;
     }
@@ -15,7 +13,7 @@ public class TriadMill implements Let{
 
         if(distance < participant.getRunDistance()){
             return true;
-        } else
+        }
         return false;
     }
 }
