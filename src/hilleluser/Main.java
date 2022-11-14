@@ -3,33 +3,28 @@ package hilleluser;
 public class Main {
     public static void main(String[] args) {
 
-        Human hm = new Human("John");
-        Human.Obstacle hw = hm.new Obstacle(5, 1000);
+
+        Participant[] participants = {new Human("John"), new Human("Bill")
+                /*new Cat("Barsik"), new Cat("Murzik"), new Robot("R2D2"), new Robot("C3PO")*/};
+
+        Let[] lets = {new Wall(6), new Wall(7) /*new TriadMill(100),
+                new TriadMill(5000), new TriadMill(10000)*/};
 
 
-        Cat cat = new Cat("Barsic");
-        Cat.Obstacle cw = cat.new Obstacle(3, 200);
-
-        Human hm1 = new Human("Bill");
-        Human.Obstacle hw1 = hm1.new Obstacle(1.5, 100);
-
-        Robot rob = new Robot("R2D2");
-        Robot.Obstacle ro = rob.new Obstacle(6,1400);
-
-        User[] user = {hm, cat, hm1,rob};
-        Let[] let = {hw, cw, hw1,ro};
-
-        grossOvercome(user, let);
-    }
-
-    public static void grossOvercome(User[] user, Let[] let) {
-        for (int i = 0; i < user.length; i++) {
-            let[i].overcome();
+        for (Participant participant : participants)
+            for (Let let : lets) {
+                if (let.overcome(participant)) {
+                    System.out.println("overcame obstacles");
+                } else
+                    System.out.println("could not overcome the obstacle");
+                break;
             }
-            System.out.println(" ");
 
-        }
     }
+}
+
+
+
 
 
 

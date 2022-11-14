@@ -1,6 +1,6 @@
 package hilleluser;
 
 public interface User {
-    public void run ();
-    public void jump ();
+    public Integer run ();
+    public Integer jump ();
 }

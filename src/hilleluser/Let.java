@@ -1,5 +1,5 @@
 package hilleluser;
 
 public interface Let {
-    public void overcome();
+    boolean overcome(Participant participant);
 }
