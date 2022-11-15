@@ -1,12 +1,22 @@
 package hilleluser;
 
 public class Robot extends Participant implements User{
+    private String name;
     private Integer jumpHeight;
     private Integer runDistance;
 
-    public Robot(Integer jumpHeight, Integer runDistance) {
+    public Robot(String name,Integer jumpHeight, Integer runDistance) {
+        this.name = name;
         this.jumpHeight = jumpHeight;
         this.runDistance = runDistance;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Override
@@ -29,7 +39,7 @@ public class Robot extends Participant implements User{
 
     @Override
     public void run() {
-        System.out.println(" to running ");
+        System.out.println(getName() + " to running ");
 
 
         }
@@ -37,7 +47,7 @@ public class Robot extends Participant implements User{
     @Override
     public void jump() {
 
-       System.out.println(" to jumping ");
+       System.out.println(getName() + " to jumping ");
 
     }
 

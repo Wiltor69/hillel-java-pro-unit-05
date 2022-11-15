@@ -12,6 +12,14 @@ public abstract class Participant {
 
     }
 
+    public void setJumpHeight(Integer jumpHeight) {
+        this.jumpHeight = jumpHeight;
+    }
+
+    public void setRunDistance(Integer runDistance) {
+        this.runDistance = runDistance;
+    }
+
     public Integer getJumpHeight() {
         return jumpHeight;
     }
